@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+
+  --color-navy-950: #061224;
+  --color-navy-900: #0B1F3A;
+  --color-navy-800: #132F56;
+  --color-navy-700: #1D4378;
+
+  --color-brand-emerald: #059669;
+  --color-brand-emerald-hover: #047857;
+  --color-brand-amber: #D97706;
+  --color-brand-amber-hover: #B45309;
+}
