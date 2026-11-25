@@ -801,6 +801,7 @@ function FAQ() {
   );
 }
 
+
 function Footer({ onOpenPolicy }) {
   const year = new Date().getFullYear();
 
@@ -811,13 +812,16 @@ function Footer({ onOpenPolicy }) {
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-navy-800">
-          <div className="md:col-span-5 space-y-3">
+          {/* Company */}
+          <div className="md:col-span-4 space-y-3">
             <Logo footer />
+
             <p className="text-sm text-slate-400 leading-relaxed">
               24/7 independent flight reservation and itinerary support desk helping travelers with
               flight changes, cancellations, name corrections, and new bookings across major
               airlines.
             </p>
+
             <div className="pt-1">
               <CallButton className="inline-flex items-center gap-2 text-lg font-bold text-emerald-400 hover:text-emerald-300">
                 <Icon name="fa-phone" />
@@ -826,8 +830,10 @@ function Footer({ onOpenPolicy }) {
             </div>
           </div>
 
-          <div className="md:col-span-3 space-y-2.5">
+          {/* Services */}
+          <div className="md:col-span-2 space-y-2.5">
             <h4 className="text-sm font-bold uppercase tracking-wider text-white">Our Services</h4>
+
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
                 <a href="#services" className="hover:text-white transition-colors">
@@ -852,10 +858,12 @@ function Footer({ onOpenPolicy }) {
             </ul>
           </div>
 
-          <div className="md:col-span-4 space-y-2.5">
+          {/* Legal */}
+          <div className="md:col-span-3 space-y-2.5">
             <h4 className="text-sm font-bold uppercase tracking-wider text-white">
               Legal & Policies
             </h4>
+
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
                 <button
@@ -883,8 +891,52 @@ function Footer({ onOpenPolicy }) {
               </li>
             </ul>
           </div>
+
+          {/* Contact Information */}
+          <div className="md:col-span-3 space-y-3">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-white">
+              Contact Information
+            </h4>
+
+            <div className="space-y-3 text-sm text-slate-400">
+              {/* Email */}
+              <div className="flex items-start gap-2.5">
+                <Icon name="fa-envelope" />
+                <a
+                  href="mailto:flightsservice17@gmail.com"
+                  className="hover:text-white transition-colors break-all"
+                >
+                  flightsservice17@gmail.com
+                </a>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-start gap-2.5">
+                <Icon name="fa-phone" />
+                <CallButton className="hover:text-white transition-colors">{PHONE}</CallButton>
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start gap-2.5">
+                <Icon name="fa-location-dot" />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=30+N+Gould+St%2C+Sheridan%2C+WY+82801"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors leading-relaxed"
+                >
+                  30 N Gould St,
+                  <br />
+                  Sheridan, WY 82801,
+                  <br />
+                  United States
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
+        {/* Disclaimers */}
         <div className="py-8 space-y-4 text-xs text-slate-400 leading-relaxed border-b border-navy-800">
           <p>
             <strong className="text-slate-200">Independent Agency Disclaimer:</strong>{' '}
@@ -894,6 +946,7 @@ function Footer({ onOpenPolicy }) {
             mentioned on this website are the property of their respective owners and are used
             strictly for descriptive identification purposes.
           </p>
+
           <p>
             <strong className="text-slate-200">Service Fee & Commission Disclosure:</strong>{' '}
             Flights-Service.com charges a service fee / commission for travel consultation, flight
@@ -904,8 +957,10 @@ function Footer({ onOpenPolicy }) {
           </p>
         </div>
 
+        {/* Copyright */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {year} Flights-Service.com. All rights reserved.</p>
+
           <p>
             24/7 Support Line:{' '}
             <CallButton className="text-slate-300 hover:text-white font-semibold">
@@ -917,6 +972,7 @@ function Footer({ onOpenPolicy }) {
     </footer>
   );
 }
+
 
 function PolicyModal({ policy, onClose }) {
   if (!policy) return null;
